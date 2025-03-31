@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ultimate SOS Battle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body class="red-turn">
+    <div id="dark-mode-toggle-container">
+        <span class="toggle-icon">☀️</span>
+        <label class="toggle-switch">
+            <input type="checkbox" id="darkModeCheckbox">
+            <span class="slider"></span>
+        </label>
+        <span class="toggle-icon">🌙</span>
+    </div>
+    
+    <h1>🔥 Ultimate SOS Battle 👩‍❤️‍👨</h1>
+    
+    <div class="scoreboard-container">
+        <div class="scoreboard">
+            <span style="color: var(--red-color)">🔴 Red:</span> <span id="score1">0</span> |
+            <span style="color: var(--blue-color)">🔵 Blue:</span> <span id="score2">0</span>
+        </div>
+        <div id="turn-indicator">🔴 Red's Turn</div>
+    </div>
+    
+    <table id="game-board"></table>
+    
+    <div id="choice-popup" class="popup">
+        <h2>Select S or O</h2>
+        <div class="button-group">
+            <button class="letter-button" onclick='selectLetter(this,"S")'>S</button>
+            <button class="letter-button" onclick='selectLetter(this,"O")'>O</button>
+        </div>
+        <button id="confirmChoiceButton" onclick="confirmChoice()">✔ Place</button>
+    </div>
+    
+    <div style="height: 30px; margin-top: 10px">
+        <p id="error-message" class="message" style="display: none">⚠️ Unable to place here!</p>
+    </div>
+    
+    <div id="game-controls">
+        <button id="startGameButton" onclick="startGame()">▶ Start Game</button>
+        <button id="resetGameButton" onclick="resetGame()" style="display: none">🔄 Restart Game</button>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
