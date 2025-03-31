@@ -1,2 +1,1 @@
 # UltimateSOSBattleGame
-# UltimateSOSBattleGame
